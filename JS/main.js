@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="card-actions">
                             <button class="btn-secondary">❤️ Add to Favorites</button>
-                            <button class="btn-primary">📅 Make a Reservation</button>
+                            <button class="btn-primary"onclick="location.href='Form.html'">📅 Make a Reservation</button>
+
                         </div>
                     </div>
                 `;

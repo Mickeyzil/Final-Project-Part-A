@@ -276,3 +276,93 @@ body {
 .btn-secondary:hover{
   background-color: #e0e0e0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Menu polish only */
+
+body {
+  background: linear-gradient(180deg, #A3D9FF 0%, #C8ECFF 100%);
+}
+
+.main-header {
+  animation: fadeDown 0.5s ease;
+}
+
+.logo-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(33, 112, 255, 0.15);
+}
+
+.welcome-section {
+  background: linear-gradient(135deg, #2170FF, #155BE8);
+  box-shadow: 0 12px 24px rgba(33, 112, 255, 0.22);
+}
+
+.menu-card-row {
+  box-shadow: 0 10px 22px rgba(33, 112, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: skewX(-20deg);
+  transition: 0.4s;
+}
+
+.menu-card-row:hover::before {
+  left: 120%;
+}
+
+.menu-card-row:hover {
+  transform: translateY(-4px);
+  background-color: #1656c9;
+}
+
+.card-icon {
+  background-color: rgba(255, 255, 255, 0.18);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.footer-content {
+  box-shadow: 0 10px 20px rgba(33, 112, 255, 0.18);
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
