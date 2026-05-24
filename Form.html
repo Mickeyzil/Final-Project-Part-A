@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reservation form</title>
     <link rel="stylesheet" href="./CSS/style.css">
-    <script src="./JS/from.js" defer></script>
+    <script src="./JS/form.js" defer></script>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
         <h1>Book a Charging Station</h1>
         <p>please fill in the details to secure your spot.</p>
     </section>
-    <form id="reservation-form" class="Booking-form">
+    <form id="reservation-form" class="booking-form">
       <div class="form-group">
         <label for="full-name">Name:</label>
         <input type="text" id="full-name" name="full-name" placeholder="Enter your FULL NAME" required >
@@ -49,7 +49,7 @@
       </div>
       <div class="form-group">
         <label for="connector-type">connector Type:</label>
-        <select id="connector-type"required>
+        <select id="connector-type" name="connector-type" required>
           <option value="">Select your connector type</option>
           <option value="CCS">CCS</option>
           <option value="CHAdeMO">CHAdeMO</option>
@@ -57,7 +57,7 @@
         </select>
       </div>
        <div class="form-group">
-        <label for="car type">Car Type:</label>
+        <label for="car-type">Car Type:</label>
         <select id="car-type" name="car-type" required>
           <option value="">Select your car type</option>
           <option value="Tesla">Tesla</option>
@@ -70,11 +70,12 @@
         <button type="submit" class="submit-btn">Confirm Reservation</button>
     </form>
     </main>
-</body>
-<footer class="main-footer">
+    <footer class="main-footer">
     <div class="footer-content">  
         <p>© 2026 EV Charge. All rights reserved to Mickey Zilberman and Gil Cohen.</p>
     </div>
 </footer>
+</body>
+
 
 </html>
