@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+const stationName = localStorage.getItem('selectedStationName');
+    if (stationName) {
+        const formTitle = document.getElementById('form-title');
+        if (formTitle) {
+            formTitle.textContent = `Reservation to ${stationName}`;
+        }
+    }
+
 const form = document.getElementById('reservation-form');    
 if(!form)    return;
 

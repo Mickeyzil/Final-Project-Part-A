@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="card-actions">
                             <button class="btn-secondary">❤️ Add to Favorites</button>
-                            <button class="btn-primary" onclick="location.href='Form.html'">
+                            <button class="btn-primary" onclick="selectStation('${station.name}')">
                             📅 Make a Reservation</button>
                         </div>
                     </div>
@@ -53,3 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
        }).catch(error => console.error('Error loading stations:', error));
 });
+
+function selectStation(stationName) {
+    localStorage.setItem('selectedStationName', stationName);
+    location.href = 'Form.html';
+}
