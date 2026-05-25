@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="card-actions">
                             <button class="btn-secondary">❤️ Add to Favorites</button>
-                            <button class="btn-primary" onclick="selectStation('${station.name}')">
+                            <button class="btn-primary" onclick="selectStation('${station.name}', '${station.available}')">
                             📅 Make a Reservation</button>
                         </div>
                     </div>
@@ -54,7 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
        }).catch(error => console.error('Error loading stations:', error));
 });
 
-function selectStation(stationName) {
+function selectStation(stationName,availableStatus) {
+    if(availableStatus[0] == '0'){
+        alert(`${stationName} is fully booked! Please choose another station.`);
+        return;
+    }
     localStorage.setItem('selectedStationName', stationName);
     location.href = 'Form.html';
 }
