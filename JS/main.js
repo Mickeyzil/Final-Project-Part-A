@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const amenitiesHTML = station.amenities
                 .map(a => `<span class="tag-item">${a}</span>`).join(' ');
 
+                const isFull = station.available[0] === '0';
+
                 card.innerHTML = `
                     <div class="station-card-header">
                         <h2 class="station-card-title">${station.name}</h2>
@@ -44,8 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="card-actions">
                             <button class="btn-secondary">❤️ Add to Favorites</button>
-                            <button class="btn-primary" onclick="selectStation('${station.name}', '${station.available}')">
-                            📅 Make a Reservation</button>
+                            <button 
+                                class="btn-primary ${isFull ? 'disabled-btn' : ''}" 
+                                ${isFull ? 'disabled' : ''} 
+                                onclick="selectStation('${station.name}', '${station.available}')">
+                                ${isFull ? '❌ Fully Booked' : '📅 Make a Reservation'}
+                            </button>
                         </div>
                     </div>
                 `;

@@ -188,6 +188,15 @@ body {
   }
 }
 
+.btn-primary.disabled-btn {
+    background-color: #cccccc !important; 
+    color: #666666 !important;            
+    border-color: #bbbbbb !important;
+    cursor: not-allowed !important;       
+    box-shadow: none !important;          
+    transform: none !important;           
+}
+
 .main-footer {
   padding: 10px;
   margin-top: 50px; 
